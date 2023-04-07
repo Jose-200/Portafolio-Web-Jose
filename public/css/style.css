@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,9 +13,17 @@ body {
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  padding: 10px 20px;
+  background-color: #F8F8F8;
+  padding: 10px 0px;
+}
+.container.sticky {
+  position: fixed;
+  width: 100%;
 }
 
+.toggle {
+  margin-left: 20px;
+}
 .toggle #menu .bar {
   display: none;
   margin-top: 3px;
@@ -27,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 .status .bar-status {
@@ -35,13 +46,13 @@ body {
   height: 10px;
   width: 30px;
   border-radius: 15px;
-  background-color: #FDED6C;
+  background-color: #458A69;
 }
 
 .view {
   display: flex;
   flex-direction: row;
-  padding-left: 0;
+  padding: 0;
 }
 .view li {
   padding: 0px 10px;
@@ -58,8 +69,35 @@ body {
   font-weight: normal;
 }
 
+.hero {
+  padding-top: 59px;
+  display: grid;
+  height: 500px;
+  width: 95vw;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+.hero .presentation-hero {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+}
+.hero .presentation-hero h1 {
+  font-size: 60px;
+}
+.hero .picture-hero {
+  display: flex;
+  grid-column: 2;
+  height: 500px;
+  width: 500px;
+  background-image: url("../../img/img-developer-oficial-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Media Query */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .toggle #menu {
     cursor: pointer;
   }
@@ -78,16 +116,38 @@ body {
     width: 100%;
     margin-top: 10px;
     margin-left: -20px;
-    border-radius: 0 0 20px 20px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     align-items: center;
     justify-content: space-around;
     animation: showAnimation 1.5s;
   }
   .toggle .view.hidden {
     animation: hiddenAnimation 1s;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .hero {
+    box-sizing: border-box;
+  }
+  .hero .presentation-hero {
+    display: flex;
+    flex-direction: column;
+    grid-column: 0;
+    grid-row: 1;
+  }
+  .hero .presentation-hero h1 {
+    font-size: 60px;
+  }
+  .hero .picture-hero {
+    grid-column: 1;
+    grid-row: 2;
+    height: 50vw;
+    width: 50vw;
+  }
+  .hero .picture-hero img {
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 }
 /* Animaciones */
@@ -106,4 +166,6 @@ body {
   to {
     opacity: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

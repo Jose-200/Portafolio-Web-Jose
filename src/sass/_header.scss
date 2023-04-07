@@ -1,0 +1,66 @@
+// Header
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: $color-fondo;
+    padding: 10px 0px;
+    &.sticky{
+        position: fixed;
+        width: 100%;
+    }
+}
+
+.toggle{
+    margin-left: 20px;
+    #menu{
+        .bar{
+            display: none;
+            margin-top: 3px;
+            height: 5px;
+            width: 30px;
+            border-radius: 12px;
+            background-color: $color-green;
+        }
+    }
+}
+.status{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    .bar-status{
+        align-self: flex-end;
+        margin-right: 10px;
+        height: 10px;
+        width: 30px;
+        border-radius: 15px;
+        background-color: $color-green;
+    }
+}
+.view{  
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+    li{
+        padding: 0px 10px;
+        list-style: none;
+        a{
+            text-decoration: none;
+
+            // Estados de mi etiqueta a
+            &.active{
+                color: $color-active;
+            }
+            &.inactive{
+                color: $color-inactive;
+                font-weight: normal;
+            }
+        }
+    }
+
+}

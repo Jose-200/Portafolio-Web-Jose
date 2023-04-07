@@ -1,0 +1,18 @@
+// Declaro las variables para los colores que usare
+$color-green: #458A69;
+$color-html: #FF5722;
+$color-css: #2196F3;
+$color-js: #D4B830;
+$color-active: #000000;
+$color-inactive: #6C6C6C;
+$color-fondo: #F8F8F8;
+
+// Mi raiz y mi body
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $color-fondo;
+}

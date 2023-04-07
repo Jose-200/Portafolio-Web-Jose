@@ -1,0 +1,30 @@
+// Sección hero
+.hero{
+    padding-top: 59px;
+    display: grid;
+    height: 500px;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+
+    .presentation-hero{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1;
+
+        h1{
+            font-size: 60px;
+        }
+    }
+    .picture-hero{
+        display: flex;
+        grid-column: 2;
+        height: 500px;
+        width: 500px;
+        background-image: url("../../img/img-developer-oficial-2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+}
