@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Amaranth", sans-serif;
 }
 
 body {
@@ -12,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 22px;
   font-weight: bold;
   background-color: #F8F8F8;
   padding: 10px 0px;
@@ -19,6 +22,7 @@ body {
 .container.sticky {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .toggle {
@@ -69,35 +73,93 @@ body {
   font-weight: normal;
 }
 
+.buttons, .hero .presentation-hero div a#moreabout {
+  padding: 20px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #458A69;
+  color: white;
+  box-shadow: 0 0 10px #458A69;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.buttons:hover, .hero .presentation-hero div a#moreabout:hover {
+  background-color: black;
+  box-shadow: 0 0 10px black;
+  animation: button-frame 1s;
+}
+
+.link, .hero .presentation-hero div a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #458A69;
+}
+.link:hover, .hero .presentation-hero div a:hover {
+  color: black;
+  animation: link-frame 1s;
+}
+
+@keyframes button-frame {
+  from {
+    background-color: #458A69;
+    box-shadow: 0 0 10px #458A69;
+  }
+  to {
+    background-color: black;
+    box-shadow: 0 0 10px black;
+  }
+}
+@keyframes link-frame {
+  from {
+    color: #458A69;
+  }
+  to {
+    color: black;
+  }
+}
 .hero {
   padding-top: 59px;
+  margin: 0 28px;
   display: grid;
-  height: 500px;
-  width: 95vw;
-  align-items: center;
-  justify-content: center;
-  margin: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(49.5%, 1fr));
+  gap: 10px;
 }
 .hero .presentation-hero {
   display: flex;
   flex-direction: column;
-  grid-column: 1;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
 }
 .hero .presentation-hero h1 {
-  font-size: 60px;
+  font-size: 4rem;
+  color: #458A69;
+}
+.hero .presentation-hero p {
+  font-size: 2.2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.hero .presentation-hero div {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero .presentation-hero div a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .hero .picture-hero {
   display: flex;
-  grid-column: 2;
-  height: 500px;
-  width: 500px;
-  background-image: url("../../img/img-developer-oficial-2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.hero .picture-hero img {
+  position: relative;
+  height: auto;
+  width: 100%;
 }
 
 /* Media Query */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .toggle #menu {
     cursor: pointer;
   }
@@ -123,31 +185,6 @@ body {
   }
   .toggle .view.hidden {
     animation: hiddenAnimation 1s;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .hero {
-    box-sizing: border-box;
-  }
-  .hero .presentation-hero {
-    display: flex;
-    flex-direction: column;
-    grid-column: 0;
-    grid-row: 1;
-  }
-  .hero .presentation-hero h1 {
-    font-size: 60px;
-  }
-  .hero .picture-hero {
-    grid-column: 1;
-    grid-row: 2;
-    height: 50vw;
-    width: 50vw;
-  }
-  .hero .picture-hero img {
-    position: relative;
-    height: 100%;
-    width: 100%;
   }
 }
 /* Animaciones */

@@ -1,30 +1,48 @@
+@import "buttons";
+
 // Sección hero
 .hero{
     padding-top: 59px;
+    margin: 0 28px;
     display: grid;
-    height: 500px;
-    width: 95vw;
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
-
+    grid-template-columns: repeat(auto-fit, minmax(49.5%, 1fr));
+    gap: 10px;
     .presentation-hero{
         display: flex;
         flex-direction: column;
-        grid-column: 1;
-
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
         h1{
-            font-size: 60px;
+            font-size: 4rem;
+            color: $color-green;
+        }
+        p{
+            font-size: 2.2rem;
+            font-family: $Secundary-tipografi;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            a{
+                @extend .link;
+                font-family: $Secundary-tipografi;
+
+                &#moreabout{
+                    @extend .buttons;
+                }
+            }
         }
     }
     .picture-hero{
         display: flex;
-        grid-column: 2;
-        height: 500px;
-        width: 500px;
-        background-image: url("../../img/img-developer-oficial-2.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        
+        align-items: center;
+        justify-content: center;
+        img{
+            position: relative;
+            height: auto;
+            width: 100%;
+        }
     }
 }

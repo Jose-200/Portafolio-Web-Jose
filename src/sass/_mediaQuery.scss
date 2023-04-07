@@ -1,5 +1,5 @@
 /* Media Query */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     // Oculto el toggle bar
     .toggle{
         #menu{
@@ -33,28 +33,5 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .hero{
-        box-sizing: border-box;
-        .presentation-hero{
-            display: flex;
-            flex-direction: column;
-            grid-column: 0;
-            grid-row: 1;
     
-            h1{
-                font-size: 60px;
-            }
-        }
-        .picture-hero{
-            grid-column: 1;
-            grid-row: 2;
-            height: 50vw;
-            width: 50vw;
-            img{
-                position: relative;
-                height: 100%;
-                width: 100%;
-            }
-        }
-    }
 }

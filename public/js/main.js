@@ -9,10 +9,15 @@ const path = document.querySelectorAll("a")
 path.forEach((item) => {
     item.onclick = () => {
         // Recorrido forEach para poder desactivar todos
-        path.forEach((elem) => elem.className = "inactive" )
-
-        // Activo el boton que corresponde
-        item.className = "active"
+        if(item.id != "continue"){
+            path.forEach((elem) => elem.className = "inactive" )
+            item.className = "active"
+        } else if (item.id == "continue") {
+            path.forEach((elem) => elem.className = "inactive" )
+            path.forEach((elem) => {
+                if(elem.id == "vtec") { elem.className = "active" }
+            })
+        }
 
         // Desactivo el show
         if(show){
@@ -40,4 +45,5 @@ menu.onclick = () => {
         }, 1000)
     }
 }
+
 

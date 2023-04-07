@@ -1,3 +1,6 @@
+// Tipografia
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
 // Declaro las variables para los colores que usare
 $color-green: #458A69;
 $color-html: #FF5722;
@@ -7,11 +10,16 @@ $color-active: #000000;
 $color-inactive: #6C6C6C;
 $color-fondo: #F8F8F8;
 
+// Tipografia
+$Primary-tipografi: 'Amaranth', sans-serif;
+$Secundary-tipografi: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 // Mi raiz y mi body
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $Primary-tipografi;
 }
 body{
     background-color: $color-fondo;
