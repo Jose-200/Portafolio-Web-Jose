@@ -6,7 +6,8 @@
     background-color: $color-green;
     color: white;
     box-shadow: 0 0 10px $color-green;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
     cursor: pointer;
 
     &:hover{
@@ -17,8 +18,9 @@
 }
 
 .link{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
+    text-align: center;
     color: $color-green;
 
     &:hover{

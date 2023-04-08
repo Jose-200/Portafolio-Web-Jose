@@ -22,7 +22,7 @@ body {
 .container.sticky {
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 
 .toggle {
@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   margin-top: 10px;
   margin-right: 20px;
-  cursor: pointer;
+  cursor: default;
 }
 .status .bar-status {
   align-self: flex-end;
@@ -80,7 +80,8 @@ body {
   background-color: #458A69;
   color: white;
   box-shadow: 0 0 10px #458A69;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
   cursor: pointer;
 }
 .buttons:hover, .hero .presentation-hero div a#moreabout:hover {
@@ -90,8 +91,9 @@ body {
 }
 
 .link, .hero .presentation-hero div a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
+  text-align: center;
   color: #458A69;
 }
 .link:hover, .hero .presentation-hero div a:hover {
@@ -136,7 +138,7 @@ body {
   color: #458A69;
 }
 .hero .presentation-hero p {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .hero .presentation-hero div {
@@ -176,7 +178,7 @@ body {
     background-color: #F8F8F8;
     height: 300px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: -20px;
     user-select: none;
     align-items: center;
@@ -203,6 +205,48 @@ body {
   to {
     opacity: 0;
   }
+}
+.techContainer, .tech .article-tech div {
+  margin: auto;
+  height: 400px;
+  width: 253px;
+  border-radius: 10px;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.tech span {
+  width: 90%;
+  padding: 20px;
+  background-color: #434343;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+}
+.tech .article-tech {
+  display: grid;
+  height: auto;
+  width: 90%;
+  grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
+  gap: 2%;
+}
+.tech .article-tech div.html {
+  border: 2px solid #FF5722;
+}
+.tech .article-tech div.css {
+  border: 2px solid #2196F3;
+}
+.tech .article-tech div.js {
+  border: 2px solid #D4B830;
+}
+.tech .article-tech div.sass {
+  border: 2px solid #F06292;
 }
 
 /*# sourceMappingURL=style.css.map */

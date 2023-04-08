@@ -10,7 +10,7 @@
     &.sticky{
         position: fixed;
         width: 100%;
-        z-index: 100;
+        z-index: 1;
     }
 }
 
@@ -32,7 +32,7 @@
     flex-direction: column;
     margin-top: 10px;
     margin-right: 20px;
-    cursor: pointer;
+    cursor: default;
 
     .bar-status{
         align-self: flex-end;

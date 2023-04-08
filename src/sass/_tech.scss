@@ -1,0 +1,40 @@
+@import "techContainer";
+
+.tech{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    span{
+        width: 90%;
+        padding: 20px;
+        background-color: $color-semiblack;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 25px;
+        color: white;
+    }
+    .article-tech{
+        display: grid;
+        height: auto;
+        width: 90%;
+        grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
+        gap: 2%;
+        div{
+            @extend .techContainer;
+            &.html{
+                border: 2px solid #FF5722;
+            }
+            &.css{
+                border: 2px solid #2196F3;
+            }
+            &.js{
+                border: 2px solid #D4B830;
+            }
+            &.sass{
+                border: 2px solid #F06292;
+            }
+        }
+    }
+}
